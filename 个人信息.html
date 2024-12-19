@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人信息页面</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      #info-container {
+        background-color: #fdf2e9;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: inline-block;
+        width: 80px;
+      }
+
+      input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="info-container">
+      <center><h2>个人信息</h2></center>
+      <label for="name">姓名:</label>
+      <input type="text" id="name" value="张三" />
+      <br />
+      <label for="birthday">生日:</label>
+      <input type="date" id="birthday" value="1990-01-01" />
+      <br />
+      <label for="hobby">爱好:</label>
+      <input type="text" id="hobby" value="阅读、运动" />
+      <br />
+      <label for="occupation">职业:</label>
+      <input type="text" id="occupation" value="工程师" />
+      <br />
+      <button onclick="updateInfo()">更新信息</button>
+      <a href="./index.html"><button>放回</button></a>
+    </div>
+    <script>
+      function updateInfo() {
+        var name = document.getElementById("name").value;
+        var birthday = document.getElementById("birthday").value;
+        var hobby = document.getElementById("hobby").value;
+        var occupation = document.getElementById("occupation").value;
+
+        alert("更改成功");
+      }
+    </script>
+  </body>
+</html>
